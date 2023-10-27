@@ -10,6 +10,9 @@ pool:
   name: local-wsl_ubuntu_20.04-pool
 
 steps:
+- script: |
+    export JAVA_HOME_8_X64=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+  displayName: 'Set JAVA_HOME for OpenJDK 1.8'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
