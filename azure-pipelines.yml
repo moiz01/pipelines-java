@@ -25,6 +25,9 @@ steps:
     goals: 'package'
   env:
     JAVA_HOME_8_X64: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
-    # jdkSourceOption: 'LocalDirectory'
-    # jdkFile: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
-    # jdkDirectory: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
+- task: Bash@3
+  displayName: "Print Environemnt Variables"
+  inputs:
+    targetType: 'inline'
+    script: |
+      printenv
