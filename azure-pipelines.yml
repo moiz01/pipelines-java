@@ -23,5 +23,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    jdkSourceOption: 'PreInstalled'
-    jdkDirectory: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
+  env:
+    JAVA_HOME_8_X64: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
+    # jdkSourceOption: 'LocalDirectory'
+    # jdkFile: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
+    # jdkDirectory: '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
